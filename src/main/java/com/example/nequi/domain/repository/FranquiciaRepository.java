@@ -8,5 +8,5 @@ import reactor.core.publisher.Mono;
 public interface FranquiciaRepository {
 	Flux<Franquicia> findAll();
 	Mono<Franquicia> findById(Long id);
-    Mono<Franquicia> save(Franquicia user);
+    Mono<Franquicia> save(Franquicia franquicia);
 }

@@ -1,6 +1,5 @@
 package com.example.nequi.domain.repository;
 
-import com.example.nequi.domain.model.ProductoMaxSucursales;
 import com.example.nequi.domain.model.Sucursal;
 
 import reactor.core.publisher.Flux;
