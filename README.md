@@ -14,6 +14,30 @@ spring.r2dbc.password=postgres
 
 La aplicación contiene los esquemas necesarios para poder correr, de manera que al iniciar la aplicación un Bean inicializador crea las tablas insumo de la apliación. Los esquemas mencionados se encuntran en el archivo schema_db.sql 
 
+### PostgreSQL Database usando terraform para AWS
+
+Se deja la carpeta **terraform** con todos los archivos para aprovicionar la infraestructura necesaria en AWS. Solo es necesario actualizar las credenciales de la cuenta en la cual se quiere desplegar:
+
+```
+provider "aws" {
+  region = var.region
+  access_key = "valor_access"
+  secret_key = "valor_secret"
+}
+```
+
+### Comandos Terraform
+Una vez actualizadas las credenciales ejecute los siguientes comando y tenga presente la contraseña digitada durante el proceso, ya que será la clave usada por la aplicación en el archivo antes mencionado.
+
+```
+$ terraform init
+```
+
+```
+$ terraform apply
+```
+
+---
 
 ## Endpoints configurados
 
@@ -116,6 +140,7 @@ Eliminar un producto de una sucursal:
 curl --location --request DELETE 'http://localhost:8084/nequi_test/producto/8'
 ```
 
+---
 
 ## Observaciones importantes
 
