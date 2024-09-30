@@ -121,4 +121,6 @@ curl --location --request DELETE 'http://localhost:8084/nequi_test/producto/8'
 
 Se parte de la logíca de negocio para modelar las tablas y construir el servicio. Una franquicia puede tener muchas sucursales. Asimismo, cada una de las sucursales maneja su inventario separado por lo que los productos son independientes para cada sucursal. Tambien es posible que una sucursal cambie de franquicia.
 
+La aplicación fue desarrollada bajo principios de programación reactiva y arquitectura hexagonal facilitando el mantenimiento y desacople de componentes.
+
 
